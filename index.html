@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>云课</title>
+  </head>
+  <style>
+  body{background: transparent}
+  .header{width:100%;background:#ccc345;height:45px;color:#fff;}
+  </style>
+  <body>
+    <div class="header">首页</div>
+    <div class="left">sdfdsfd</div>
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <button id = "add">新建窗口</button><br/>
+    <button id = "close">关闭窗口</button><br/>
+<script>
+const add = document.querySelector("#add")
+const ipc = require('electron').ipcRenderer
+const close = document.querySelector("#close");
+add.onclick = ()=>
+{
+       ipc.send('add');
+}
+close.onclick = ()=>
+{
+
+   ipc.send('close');
+}
+</script>
+  </body>
+</html>

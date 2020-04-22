@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#B197FB,#645AE7);
+            overflow: hidden;
+        }
+        body {
+            -webkit-user-select: none;
+        }
+        input[type="submit"],input[type="reset"],input[type="button"],input[type="text"],button,textarea {
+            -webkit-app-region: no-drag;
+        }
+        .shadow {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .container{
+            width:100%;
+            height:100%;
+            position: relative;
+            background: url(../assets/img/bg.png) no-repeat;
+        }
+        .form-main{
+            width:300px;
+            height:230px;
+            margin:30px auto;
+            display:block;
+            position: relative;
+            padding:20px 50px 10px 50px;
+            background: url(../assets/img/formbg.png) no-repeat;
+        }
+        ul,li{list-style: none;}
+        .form-title{font-size:30px;text-align: center;}
+        .form-btn{width:100%;background:#5A56E8;
+        color:#fff;text-align: center;border:0;border-radius: 30px;
+        height:45px;line-height:45px;margin-top:10px
+        }
+        .form-li{
+            width:100%;
+            border-bottom:2px solid #5A56E8;
+            height:35px;
+            margin-top:10px;
+        }
+        button:focus,input:focus{ border:none;outline:none }
+        .form-li input{
+            font-size:14px;
+            border:none;width:100%;height:30px;
+            padding:3px;box-sizing: border-box;
+            background-color: #ccc;
+        }
+        .form-li .uid{padding-left:40px;background: url(../assets/img/zhanghao.png) no-repeat left;}
+        .form-li .pwd{padding-left:40px;background: url(../assets/img/mima.png) no-repeat left;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-main">
+            <div class="form-title">智慧课堂</div>
+            <div class="form-li">
+                <input type="text" class="uid">
+            </div>
+            <div class="form-li">
+                <input type="password" class="pwd">
+            </div>
+            <button class="form-btn">登录</button>
+        </div>
+    </div>
+</body>
+</html>
