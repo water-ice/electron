@@ -16,6 +16,7 @@
         }
         body {
             -webkit-user-select: none;
+            /* -webkit-app-region: drag */
         }
         input[type="submit"],input[type="reset"],input[type="button"],input[type="text"],button,textarea {
             -webkit-app-region: no-drag;
@@ -46,7 +47,8 @@
         .form-title{font-size:30px;text-align: center;}
         .form-btn{width:100%;background:#5A56E8;
         color:#fff;text-align: center;border:0;border-radius: 30px;
-        height:45px;line-height:45px;margin-top:10px
+        height:45px;line-height:45px;margin-top:10px;
+        cursor: pointer;
         }
         .form-li{
             width:100%;
@@ -75,8 +77,9 @@
             <div class="form-li">
                 <input type="password" class="pwd">
             </div>
-            <button class="form-btn">登录</button>
+            <button class="form-btn" id="login">登录</button>
         </div>
     </div>
 </body>
 </html>
+<script src="../renderer/login.js"></script>
